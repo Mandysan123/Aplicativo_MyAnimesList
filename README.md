@@ -1,8 +1,6 @@
 # 📱 MY ANIMES LIST
 ![Logo do Projeto](src/assets/imgs/aplicativof1.png)
-![Logo do Projeto](src/assets/imgs/aplicativof2.png)
-![Logo do Projeto](src/assets/imgs/aplicativof3.png) 
-![Logo do Projeto](src/assets/imgs/aplicativof4.png) 
+![Logo do Projeto](src/assets/imgs/aplicativof3.png)  
 ![Logo do Projeto](src/assets/imgs/aplicativof5.png) 
 ![Logo do Projeto](src/assets/imgs/aplicativof6.png) 
 
