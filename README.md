@@ -22,6 +22,8 @@ Este aplicativo é uma ferramenta prática para fãs de animes gerenciarem suas 
 - 🌟 Review particular do usuário e adição de animes e comentários
 - 💡 Exclusão e edição dos animes adicionados no aplicativo pelo usuário
 
+ ## 💻Vídeo no Youtube navegando pelo aplicativo -> 🔴 https://youtu.be/qlkBG5An3yI
+
 ## 🚀 Instalação e Execução
 
 ### 📋 Pré-requisitos
