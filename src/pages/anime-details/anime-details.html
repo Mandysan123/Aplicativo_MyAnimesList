@@ -1,0 +1,47 @@
+<ion-header>
+  <div class="custom-navbar">
+    <div class="navbar-left">
+      <button class="custom-button" (click)="navCtrl.pop()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </div>
+    <div class="navbar-title">
+      {{ anime.title }}
+    </div>
+    <div class="navbar-buttons">
+      <button class="custom-button" (click)="editAnime()">
+        <ion-icon name="create"></ion-icon>
+      </button>
+      <button class="custom-button danger" (click)="confirmDelete()">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content class="home-container" padding>
+  <img [alt]="anime.title" [src]="anime.imageUrl" />
+
+  <div class="card-container">
+    <ion-card id="card">
+      <ion-card-header>
+        <ion-card-title>{{ anime.title }}</ion-card-title>
+        <p>Nota: {{ anime.rating }}/10</p>
+      </ion-card-header>
+      <ion-card-content>
+        {{ anime.description }}
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-item>
+    <ion-textarea placeholder="Digite o que achou desse anime" [(ngModel)]="newComment"
+      (keyup.enter)="addComment()"></ion-textarea>
+  </ion-item>
+
+  <ion-list>
+    <ion-item *ngFor="let comment of comments">
+      <ion-textarea [value]="comment" readonly="true"></ion-textarea>
+    </ion-item>
+  </ion-list>
+</ion-content>

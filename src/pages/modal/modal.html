@@ -1,0 +1,38 @@
+<ion-header>
+  <div class="edit-navbar">
+    <div class="edit-navbar-left">
+      <button class="edit-button-cancel" (click)="cancel()">
+        <ion-icon name="close"></ion-icon> <!-- Ícone de cancelar -->
+      </button>
+    </div>
+    <div class="edit-navbar-title">
+      Adicionar Anime
+    </div>
+    <div class="edit-navbar-buttons">
+      <button class="edit-button" (click)="confirm()">
+        Confirmar
+      </button>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked>Nome do anime</ion-label>
+    <ion-input [(ngModel)]="anime.title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Nota</ion-label>
+    <ion-input [(ngModel)]="anime.rating" type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Descrição</ion-label>
+    <ion-textarea [(ngModel)]="anime.description"></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <input type="file" (change)="onFileSelected($event)" />
+  </ion-item>
+  <ion-item *ngIf="imagePreview">
+    <img [src]="imagePreview" alt="Image Preview" />
+  </ion-item>
+</ion-content>

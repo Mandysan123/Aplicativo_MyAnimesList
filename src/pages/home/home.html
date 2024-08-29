@@ -1,0 +1,24 @@
+<ion-header>
+  <div class="header-container">
+    <ion-title class="headerTitle">✨ My Animes List ✨</ion-title>
+    <ion-searchbar (input)="filterAnimes()" [(ngModel)]="searchTerm"></ion-searchbar>
+  </div>
+</ion-header>
+
+<ion-content class="home-container">
+  <div class="button-container">
+    <button id="button-color" ion-button block (click)="openModal()">Adicionar anime</button>
+  </div>
+
+  <ion-card *ngFor="let anime of filteredAnimes" (click)="openAnimeDetails(anime)">
+    <img [alt]="anime.title" [src]="anime.imageUrl" />
+    <ion-card-header>
+      <ion-card-title>{{ anime.title }}</ion-card-title>
+      <p>Nota ⭐: {{ anime.rating }}/10</p>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ anime.description }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
